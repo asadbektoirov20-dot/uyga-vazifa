@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Uyga vazifa – Kirish</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="page">
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="brand"><i></i>Uyga vazifa</div>
+      <h1>Darsdan keyin ham <span>bir joyda</span>.</h1>
+      <p class="lead">Oʻqituvchi uy ishini joylaydi, oʻquvchi uni telefonidan koʻradi. Rolingizni tanlang va login bilan kiring.</p>
+      <div class="cue">Sichqonchani suring, kitob va qalamlarni bosing. Pastga suring ↓</div>
+    </div>
+
+    <div class="card" id="loginCard" data-tilt>
+      <h2 id="ttl">Oʻqituvchi sifatida kirish</h2>
+      <p class="sub">Maktab bergan login va paroldan foydalaning.</p>
+      <div class="seg" role="group" aria-label="Rolni tanlang">
+        <button type="button" id="rT" aria-pressed="true">Oʻqituvchi</button>
+        <button type="button" id="rS" aria-pressed="false">Oʻquvchi</button>
+      </div>
+      <form id="f" novalidate>
+        <div class="field"><label for="u">Login</label>
+          <input id="u" autocomplete="username" autocapitalize="none" placeholder="Loginingiz"></div>
+        <div class="field"><label for="p">Parol</label>
+          <input id="p" class="pw" type="password" autocomplete="current-password" placeholder="Parolingiz">
+          <button type="button" class="toggle" id="t">Koʻrsatish</button></div>
+        <button class="btn" type="submit">Kirish</button>
+        <p class="msg" id="m" role="alert"></p>
+      </form>
+      <div class="demo" id="demo"></div>
+    </div>
+
+    <div class="card" id="panel" data-tilt>
+      <h2 id="hello"></h2>
+      <p class="sub" id="role"></p>
+      <div id="teacherBox" style="display:none">
+        <label for="hwText">Yangi uy ishi</label>
+        <div class="row"><input id="hwText" placeholder="Masalan: 45-bet, 3-mashq"><button class="btn" id="add" type="button">Berish</button></div>
+      </div>
+      <ul class="list" id="hwList"></ul>
+      <button class="btn ghost" id="out" type="button">Chiqish</button>
+    </div>
+  </div>
+</header>
+
+<section class="info">
+  <div class="wrap">
+    <h2 class="rv">Uy ishi har doim koʻz oldingizda</h2>
+    <p class="rv d1">Qogʻoz daftar va chat guruhlaridagi xabarlar oʻrniga bitta aniq joy: nima berildi, qachongacha topshiriladi.</p>
+    <div class="cols">
+      <div class="rv" data-tilt><h3>Oʻqituvchi uchun</h3><p>Uy ishini bir marta yozing, sinfdagi barcha oʻquvchilar koʻradi.</p></div>
+      <div class="rv d1" data-tilt><h3>Oʻquvchi uchun</h3><p>Barcha vazifalar muddati bilan roʻyxatda turadi, hech narsa unutilmaydi.</p></div>
+      <div class="rv d2" data-tilt><h3>Xavfsiz kirish</h3><p>Har kim faqat oʻz login va paroli bilan kiradi.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="info">
+  <div class="wrap">
+    <h2 class="rv">Oʻquvchi shunday koʻradi</h2>
+    <p class="rv d1">Namuna: kirgandan keyin vazifalar mana bunday chiqadi.</p>
+    <div class="hw">
+      <article class="rv" data-tilt><div><b>Matematika</b><small>45-bet, 3 va 4-mashq</small></div><span class="tag">Ertagacha</span></article>
+      <article class="rv d1" data-tilt><div><b>Ona tili</b><small>“Vatan” mavzusida insho</small></div><span class="tag">3 kun qoldi</span></article>
+      <article class="rv d2" data-tilt><div><b>Fizika</b><small>Laboratoriya hisoboti</small></div><span class="tag late">Muddati oʻtgan</span></article>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap">© 2026 Uyga vazifa. Barcha huquqlar himoyalangan.</div></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
